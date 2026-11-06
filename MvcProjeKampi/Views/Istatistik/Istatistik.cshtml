@@ -1,0 +1,43 @@
+﻿
+@{
+    ViewBag.Title = "Istatistik";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Istatistik Sayfası</h2>
+
+<br />
+
+<table class="table table-bordered">
+
+    <tr>
+        <th>Kategori Sayısı </th>
+        <td>@ViewBag.CategoryCount</td>
+
+
+    </tr>
+    <tr>
+        <th>Yazılım kategorisindeki başlık sayısı.</th>
+        <td>@ViewBag.YazilimBaslikSayisi</td>
+
+    </tr>
+
+    <tr>
+        <th>Yazar Adında 'a' harfi geçen yazar sayısı</th>
+        <td>@ViewBag.YazarAdindaA</td>
+
+    </tr>
+
+    <tr>
+        <th>En Fazla Başlığa Sahip Kategori Adı</th>
+        <td>@ViewBag.EnFazlaBaslikKategori</td>
+
+    </tr>
+    <tr>
+        <th>Kategori Tablosunda Durumu true olan karegoriler ile false olan kategoriler arasındaki sayısal fark</th>
+        <td>@ViewBag.kategoriDurumFarki</td>
+
+    </tr>
+
+
+</table>
