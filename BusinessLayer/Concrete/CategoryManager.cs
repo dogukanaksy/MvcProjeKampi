@@ -19,9 +19,11 @@ namespace BusinessLayer.Concrete
             _categorydal = categorydal;
         }
 
+        public void CategoryAdd(Category category)
+        {
+            _categorydal.Insert(category);
+        }
 
-
-       
         public List<Category> GetList()
         {
             return _categorydal.List();
