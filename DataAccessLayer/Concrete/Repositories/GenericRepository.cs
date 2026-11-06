@@ -26,6 +26,11 @@ namespace DataAccessLayer.Concrete.Repositories
             c.SaveChanges();
         }
 
+        public T Get(Expression<Func<T, bool>> filter)
+        {
+            return _object.SingleOrDefault(filter); //Bir dizide veya liste içinde tek bir değer döndürmek için kullanılır. Eğer birden fazla değer döndürürse hata verir.
+        }
+
         public void Insert(T p)
         {
             _object.Add(p);
@@ -37,7 +42,7 @@ namespace DataAccessLayer.Concrete.Repositories
             return _object.ToList();
         }
 
-        public List<T> List(Expression<Func<T, bool>> filter)
+        public List<T> List(Expression<Func<T, bool>> filter) //komple bir liste döndürürmek için kullanılır. Örn: Aktif olan kategorileri listele gibi.
         {
             return _object.Where(filter).ToList();
         }
