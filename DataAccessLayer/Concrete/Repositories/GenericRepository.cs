@@ -22,7 +22,9 @@ namespace DataAccessLayer.Concrete.Repositories
         }
         public void Delete(T p)
         {
-            _object.Remove(p);
+            var deletedEntity = c.Entry(p); //veritabanı ile ilişkilendirilmiş bir nesneye erişmek için kullanılır. Bu nesne üzerinden ekleme, silme, güncelleme gibi işlemler yapılabilir.
+            deletedEntity.State = EntityState.Deleted; //silme işlemi için kullanılır.
+            //_object.Remove(p);
             c.SaveChanges();
         }
 
@@ -33,8 +35,10 @@ namespace DataAccessLayer.Concrete.Repositories
 
         public void Insert(T p)
         {
-            _object.Add(p);
-            c.SaveChanges();
+            var addedEntity = c.Entry(p); //veritabanı ile ilişkilendirilmiş bir nesneye erişmek için kullanılır. Bu nesne üzerinden ekleme, silme, güncelleme gibi işlemler yapılabilir.
+            addedEntity.State = EntityState.Added; //ekleme işlemi için kullanılır.
+            //_object.Add(p); //veritabanına ekleme işlemi için kullanılır.
+            c.SaveChanges(); //veritabanına ekleme işlemi için kullanılır.
         }
 
         public List<T> List()
@@ -49,7 +53,9 @@ namespace DataAccessLayer.Concrete.Repositories
 
         public void Update(T p)
         {
-            c.SaveChanges();
+            var updatedEntity = c.Entry(p); //veritabanı ile ilişkilendirilmiş bir nesneye erişmek için kullanılır. Bu nesne üzerinden ekleme, silme, güncelleme gibi işlemler yapılabilir.
+            updatedEntity.State = EntityState.Modified; //güncelleme işlemi için kullanılır.    
+            c.SaveChanges(); 
         }
     }
 }
