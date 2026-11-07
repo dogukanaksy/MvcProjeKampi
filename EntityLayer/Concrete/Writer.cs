@@ -15,7 +15,7 @@ namespace EntityLayer.Concrete
         public string WriterName { get; set; }
         [StringLength(50)]
         public string WriterSurName { get; set; }
-        [StringLength(100)]
+        [StringLength(1000)]
         public string WriterImage { get; set; }
         [StringLength(100)]
         public string WriterAbout { get; set; }
@@ -26,6 +26,7 @@ namespace EntityLayer.Concrete
 
         [StringLength(200)]
         public string WriterTitle { get; set; }
+        public bool WriterStatus { get; set; }
 
 
         public ICollection<Heading> Headings { get; set; }
