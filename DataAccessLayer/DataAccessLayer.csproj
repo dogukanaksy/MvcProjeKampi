@@ -74,6 +74,10 @@
     <Compile Include="Migrations\202611071859367_mig_Writer_edit.Designer.cs">
       <DependentUpon>202611071859367_mig_Writer_edit.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202611071950415_mig_Writer_title.cs" />
+    <Compile Include="Migrations\202611071950415_mig_Writer_title.Designer.cs">
+      <DependentUpon>202611071950415_mig_Writer_title.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -90,6 +94,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202611071859367_mig_Writer_edit.resx">
       <DependentUpon>202611071859367_mig_Writer_edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202611071950415_mig_Writer_title.resx">
+      <DependentUpon>202611071950415_mig_Writer_title.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
