@@ -1,5 +1,6 @@
 ﻿using BusinessLayer.Abstract;
 using DataAccessLayer.Abstract;
+using DataAccessLayer.EntityFramework;
 using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
@@ -20,7 +21,7 @@ namespace BusinessLayer.Concrete
 
         public Message GetByID(int id)
         {
-            throw new NotImplementedException();
+            return _messageDal.Get(x => x.MessageID == id);
         }
 
         
@@ -33,6 +34,11 @@ namespace BusinessLayer.Concrete
         public List<Message> GetListSendbox()
         {
             return _messageDal.List(x => x.SenderMail == "admin@gmail.com");
+        }
+        public List<Message> GetListDrafts()
+        {
+            return _messageDal.List(x =>
+                x.SenderMail == "admin@gmail.com" && x.IsDraft == true);
         }
 
         public void MessageAdd(Message message)

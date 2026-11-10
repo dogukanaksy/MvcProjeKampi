@@ -104,6 +104,10 @@
     <Compile Include="Migrations\202611081924125_mig_Add_message_class.Designer.cs">
       <DependentUpon>202611081924125_mig_Add_message_class.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202611082220014_mig_Message_Draft_Check.cs" />
+    <Compile Include="Migrations\202611082220014_mig_Message_Draft_Check.Designer.cs">
+      <DependentUpon>202611082220014_mig_Message_Draft_Check.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -141,6 +145,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202611081924125_mig_Add_message_class.resx">
       <DependentUpon>202611081924125_mig_Add_message_class.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202611082220014_mig_Message_Draft_Check.resx">
+      <DependentUpon>202611082220014_mig_Message_Draft_Check.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

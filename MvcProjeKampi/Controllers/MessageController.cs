@@ -23,6 +23,11 @@ namespace MvcProjeKampi.Controllers
             var messagelist = mm.GetListSendbox();
             return View(messagelist);
         }
+        public ActionResult GetInboxMessageDetails(int id)
+        {
+            var values = mm.GetByID(id);
+            return View(values);
+        }
         [HttpGet]
         public ActionResult NewMessage()
         {
@@ -33,5 +38,24 @@ namespace MvcProjeKampi.Controllers
         {
             return View();
         }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult SaveDraft(Message p)
+        {
+            p.SenderMail = "admin@gmail.com";
+            p.MessageDate = DateTime.Now;
+            p.IsDraft = true;
+
+            mm.MessageAdd(p);
+
+            return RedirectToAction("NewMessage");
+        }
+        [HttpGet]
+        public ActionResult Drafts()
+        {
+            var taslaklar = mm.GetListDrafts();
+            return View(taslaklar);
+        }
+
     }
 }
