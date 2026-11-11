@@ -140,6 +140,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\IstatistikController.cs" />
     <Compile Include="Controllers\MessageController.cs" />
+    <Compile Include="Helpers\MessageText.cs" />
     <Compile Include="Controllers\TestController.cs" />
     <Compile Include="Controllers\WriterController.cs" />
     <Compile Include="Global.asax.cs">
@@ -2314,8 +2315,11 @@
     <Content Include="Views\Contact\MessageListMenu.cshtml" />
     <Content Include="Views\Message\Inbox.cshtml" />
     <Content Include="Views\Message\Sendbox.cshtml" />
+    <Content Include="Views\Message\Drafts.cshtml" />
     <Content Include="Views\Message\NewMessage.cshtml" />
     <Content Include="Views\Message\GetInboxMessageDetails.cshtml" />
+    <Content Include="Views\Message\GetSendboxMessageDetails.cshtml" />
+    <Content Include="Views\Message\MessageAdd.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

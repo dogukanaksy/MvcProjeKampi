@@ -108,6 +108,10 @@
     <Compile Include="Migrations\202611082220014_mig_Message_Draft_Check.Designer.cs">
       <DependentUpon>202611082220014_mig_Message_Draft_Check.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202611102322385_mig_Contact_datetime_add.cs" />
+    <Compile Include="Migrations\202611102322385_mig_Contact_datetime_add.Designer.cs">
+      <DependentUpon>202611102322385_mig_Contact_datetime_add.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -148,6 +152,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202611082220014_mig_Message_Draft_Check.resx">
       <DependentUpon>202611082220014_mig_Message_Draft_Check.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202611102322385_mig_Contact_datetime_add.resx">
+      <DependentUpon>202611102322385_mig_Contact_datetime_add.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

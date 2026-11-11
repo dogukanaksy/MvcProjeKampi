@@ -47,7 +47,7 @@
                                 <br />
                                 <h6>
                                     Mail Adresi : @Html.DisplayFor(x => x.SenderMail)
-                                    <span class="mailbox-read-time float-right">@DateTime.Parse(Html.DisplayFor(x=>x.MessageDate).ToString()).ToShortDateString()</span>
+                                    <span class="mailbox-read-time float-right">@Model.MessageDate.ToString("dd-MMM-yyyy")</span>
                                 </h6>
                             </div>
                             <!-- /.mailbox-read-info -->
@@ -70,7 +70,7 @@
                             </div>
                             <!-- /.mailbox-controls -->
                             <div class="mailbox-read-message">
-                                <p>@Html.DisplayFor(x => x.MessageContent)</p>
+                                <p>@MvcProjeKampi.Helpers.MessageText.ToPlainText(Model.MessageContent)</p>
                             </div>
                             <!-- /.mailbox-read-message -->
                         </div>
